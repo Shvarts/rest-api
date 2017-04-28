@@ -1,0 +1,58 @@
+name: some service
+description: |
+urlPattern: route
+style: RESOURCE
+methods:
+    GET:
+        summary: |
+        notes: |
+        # implementation: monitoring.isAlive
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                -
+                    field: Accept-Encoding
+                    content: "gzip, deflate"
+        responses:
+            -
+                name: OK
+                statusCode: 200
+                reason: Successful execution
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                    -
+                        field: X-Application-API-Version
+                        content: v0.0.0
+                mockBody: responseBody.json
+        testCases:
+            -
+                name: some service
+                description: |
+                url: /route
+                template: testGetMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field: Accept
+                            content: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                        -
+                            field: Accept-Encoding
+                            content: "gzip, deflate"
+                response:
+                    statusCode: 200
+                    cookies: []
+                    headers:
+                        -
+                            field: Content-Type
+                            content: application/json
+                        -
+                            field: X-Application-API-Version
+                            content: v0.0.0
