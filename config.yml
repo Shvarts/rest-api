@@ -3,8 +3,8 @@ apiVersion: v0.0.0
 author: TBD.
 licence: TBD.
 serviceUrlPrefix: /
-servicePort: 5001
-baseUrl: http://localhost:5001/
+servicePort: 5002
+baseUrl: http://localhost:5002/
 servicesRoot: services
 services:
     - /mock

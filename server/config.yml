@@ -8,10 +8,10 @@ environments:
 
   # This is the default configuration set
   default:
-    documentRoot: ../resources/
+    documentRoot: ../../angular-seed/app/
     restapiRoot: ..
     useRemoteServices: false
 
   # Override the default config parameters with values specific to the development environment
   development:
-    port: 5001
+    port: 5002
